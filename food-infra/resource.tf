@@ -107,11 +107,11 @@ resource "aws_instance" "tf-ec2" {
   key_name="LMS_key"
   subnet_id=aws_subnet.tf-subnet.id
   vpc_security_group_ids=[aws_security_group.tf-sg.id]
-  user_data=file("food.sh")
+  user_data=file("ecomm.sh")
 
 
   tags = {
-    Name = "tf-instance"
+    Name = "ecomm-instance"
   }
 }
 
